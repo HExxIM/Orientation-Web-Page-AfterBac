@@ -16,7 +16,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="mb-32 flex flex-wrap justify-center gap-6 items-center text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-right">
+      <div className="mb-32 flex flex-row-reverse flex-wrap justify-center gap-6 items-center text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-right">
         {Fields.map((field, index) => (
           <Button key={index} title={field.field} link={`/${field.slug}`} />
         ))}
