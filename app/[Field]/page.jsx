@@ -28,7 +28,7 @@ export default function OpenLimitedPage({ params }) {
       </div>
       <div className="mb-32 flex flex-wrap gap-6 text-center justify-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-right">
         {Fields[FieldIndex].Schools.map((School, index) => (
-          <Button onClick={() => setShowSchoolPopup(true)} key={index} title={School.Name} />
+          <Button setShowSchoolPopup={setShowSchoolPopup} key={index} title={School.Name} />
         ))}
       </div>
       {
