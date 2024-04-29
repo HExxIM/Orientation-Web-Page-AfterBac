@@ -8,7 +8,7 @@ import {
   DialogFooter,
 } from "@material-tailwind/react";
 
-export function SchoolPopup(SchoolData) {
+export default function SchoolPopup(SchoolData) {
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => setOpen(!open);
