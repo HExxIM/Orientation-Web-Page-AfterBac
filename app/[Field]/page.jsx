@@ -6,6 +6,7 @@ import Link from "next/link";
 
 export default function OpenLimitedPage({ params }) {
   const FieldIndex = Fields.findIndex((field) => field.slug === params.Field);
+
   return (
     <main className="flex flex-col gap-[7rem] items-center justify-center p-24">
       <Link href={"/"}>
