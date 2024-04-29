@@ -24,11 +24,8 @@ export default function Button({ title, link }) {
     >
       <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
       <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
-      <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">
+      <span class="relative w-full mr-3 ml-3 mt-1 mb-1 text-right text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">
         {title}
-        <span className="inline-block transition-transform ml-3 group-hover:translate-x-[-0.3rem] motion-reduce:transform-none">
-          &lt;-{" "}
-        </span>
       </span>
       <span class="absolute inset-0 border-2 border-white rounded-full"></span>
     </Link>
