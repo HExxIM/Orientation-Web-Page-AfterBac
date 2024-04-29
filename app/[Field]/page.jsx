@@ -1,8 +1,10 @@
+"use client";
 import Button from "../Components/Button";
 import Fields from "../Database/Fields";
 import Image from "next/image";
 import Home from "../../public/home.svg";
 import Link from "next/link";
+import Popup from "../Components/Popup";
 
 export default function OpenLimitedPage({ params }) {
   const FieldIndex = Fields.findIndex((field) => field.slug === params.Field);
@@ -24,7 +26,8 @@ export default function OpenLimitedPage({ params }) {
       </div>
       <div className="mb-32 flex flex-wrap gap-6 text-center justify-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-right">
         {Fields[FieldIndex].Schools.map((School, index) => (
-          <Button key={index} title={School.Name} link={`/`} />
+          // <Button key={index} title={School.Name} link={`/`} />
+          <Popup Title={School.Name} />
         ))}
       </div>
     </main>
