@@ -13,7 +13,7 @@ export default function OpenLimitedPage({ params }) {
   const [school, setSchool] = useState(null);
 
   return (
-    <main className="flex flex-col gap-[7rem] items-center justify-center p-24">
+    <main className="flex flex-col gap-[6rem] items-center justify-center p-5 h-[100vh]">
       <Link href={"/"}>
         <Image
           className="absolute top-9 right-9 rounded-full hover:bg-blue-600 cursor-pointer p-2 shadow-lg"
@@ -28,16 +28,25 @@ export default function OpenLimitedPage({ params }) {
         </h1>
       </div>
       <div className="mb-10 flex flex-wrap gap-6 text-center justify-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-right">
-        {Fields[FieldIndex] && Fields[FieldIndex].Schools.map((School, index) => (
-          <div onClick={() => { setSchool(School); setShowSchoolPopup(true) }}>
-            <Button
-              key={index}
-              title={School.Name}
-            />
-          </div>
-        ))}
+        {Fields[FieldIndex] &&
+          Fields[FieldIndex].Schools.map((School, index) => (
+            <div
+              onClick={() => {
+                setSchool(School);
+                setShowSchoolPopup(true);
+              }}
+            >
+              <Button key={index} title={School.Name} />
+            </div>
+          ))}
       </div>
-      {showSchoolPopup && <SchoolPopup setShowSchoolPopup={setShowSchoolPopup} school={school} />}
+      {showSchoolPopup && (
+        <SchoolPopup
+          className=""
+          setShowSchoolPopup={setShowSchoolPopup}
+          school={school}
+        />
+      )}
     </main>
   );
 }
