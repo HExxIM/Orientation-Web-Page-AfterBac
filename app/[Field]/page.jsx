@@ -10,6 +10,7 @@ import { useState } from "react";
 export default function OpenLimitedPage({ params }) {
   const FieldIndex = Fields.findIndex((field) => field.slug === params.Field);
   const [showSchoolPopup, setShowSchoolPopup] = useState(false);
+  const [school, setSchool] = useState(null);
 
   return (
     <main className="flex flex-col gap-[7rem] items-center justify-center p-24">
@@ -28,14 +29,15 @@ export default function OpenLimitedPage({ params }) {
       </div>
       <div className="mb-10 flex flex-wrap gap-6 text-center justify-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-right">
         {Fields[FieldIndex].Schools.map((School, index) => (
-          <Button
-            setShowSchoolPopup={setShowSchoolPopup}
-            key={index}
-            title={School.Name}
-          />
+          <div onClick={() => { setSchool(School); setShowSchoolPopup(true) }}>
+            <Button
+              key={index}
+              title={School.Name}
+            />
+          </div>
         ))}
       </div>
-      {showSchoolPopup && <showSchoolPopup />}
+      {showSchoolPopup && <SchoolPopup setShowSchoolPopup={setShowSchoolPopup} school={school} />}
     </main>
   );
 }
