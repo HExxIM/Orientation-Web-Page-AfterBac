@@ -18,7 +18,8 @@ export default function SchoolPopup({ setShowSchoolPopup, school }) {
             }}
           />
           <h1 className="text-3xl font-bold">{school.Name}</h1>
-          <p className="text-lg">School Description</p>
+          <p className="text-lg">{school.Description}</p>
+          <p className="text-lg">{school.Address}</p>
         </div>
       </div>
     </div>
