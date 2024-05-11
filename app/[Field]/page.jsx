@@ -13,7 +13,7 @@ export default function OpenLimitedPage({ params }) {
   const [school, setSchool] = useState(null);
 
   return (
-    <main className="flex flex-col gap-[6rem] items-center justify-center p-6 h-[100vh]">
+    <main className="flex flex-col gap-[6rem] items-center justify-center p-6 pb-16 h-[100%]">
       <Link href={"/"}>
         <Image
           className="absolute top-9 right-9 rounded-full hover:bg-blue-600 cursor-pointer p-2 shadow-lg"
