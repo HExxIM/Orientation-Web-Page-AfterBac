@@ -28,10 +28,10 @@ export default function SchoolPopup({ setShowSchoolPopup, school }) {
             onClick={() => setShowSchoolPopup(false)}
           />
           <h1 className="text-3xl font-bold mx-8">{school.Name}</h1>
-          {school.Address && (
+          {/* {school.Address && (
             <h2 className="text-2xl mt-4">{school.Address}</h2>
-          )}
-          <p className="text-lg" id="description">
+          )} */}
+          <p className="text-lg mt-4" id="description">
             {school.Description}
           </p>
         </div>
